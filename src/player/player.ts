@@ -1,8 +1,8 @@
 import { RPC } from '../app/app';
-import Song  from '../model/song';
+import Song from '../model/song';
 import Radio from '../model/radio';
 import Unknown from '../model/unknown';
-import Episode  from '../model/episode';
+import Episode from '../model/episode';
 import * as Tray from '../manager/tray';
 import { globalShortcut } from 'electron';
 import PlayerModel from '../model/player';
@@ -55,7 +55,7 @@ export function registerRPC() {
                 buttons: SONG.getButtons(),
                 instance: false
             });
-        
+
             if (LAST !== SONG.getId()) {
                 Tray.setMessage(SONG.trayMessage);
                 LAST = SONG.getId();
@@ -66,7 +66,7 @@ export function registerRPC() {
     }, 5000);
 }
 
-function getSong(current: any, listening: boolean, remaining: number): PlayerModel {    
+function getSong(current: any, listening: boolean, remaining: number): PlayerModel {
     if (current.LIVE_ID) {
         if (`RADIO_${current.LIVE_ID}` != LAST) RADIO_TIMESTAMP = Math.floor(Date.now() / 1000);
 

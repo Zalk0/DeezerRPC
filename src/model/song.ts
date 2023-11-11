@@ -15,8 +15,8 @@ export default class Song extends PlayerModel {
     ) {
         super(id, title, listening, image, time);
 
-        this.album = !album ? 'Unknown Album': album;
-        this.artist = !artist ? 'Unknown Artist': artist;
+        this.album = !album ? 'Unknown Album' : album;
+        this.artist = !artist ? 'Unknown Artist' : artist;
         this.trayMessage = `${this.artist} • ${this.title}`;
         this.notification = `${this.title}\n${this.album}\n${this.artist}`;
     }
@@ -43,7 +43,7 @@ export default class Song extends PlayerModel {
 
     getButtons(): any[] | undefined {
         if (this.id < 0) return undefined;
-        
-        return [{ label: 'Play on Deezer', url: `https://www.deezer.com/track/${this.id}` }];
+
+        return [{label: 'Play on Deezer', url: `https://www.deezer.com/track/${this.id}`}];
     }
 }

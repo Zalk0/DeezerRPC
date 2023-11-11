@@ -21,7 +21,7 @@ export function register() {
                 label: 'Toggle',
                 click: () => __mainWindow.isVisible() ? __mainWindow.hide() : __mainWindow.show()
             },
-            { type: 'separator' },
+            {type: 'separator'},
             {
                 type: 'submenu',
                 label: 'Player',
@@ -72,13 +72,13 @@ export function register() {
                 label: 'Check for updates',
                 click: () => Update.checkVersion(true)
             },
-            { type: 'separator' },
+            {type: 'separator'},
             {
                 type: 'normal',
                 label: `${APP.name} ${APP.version}`,
                 click: () => shell.openExternal(APP.homepage)
             },
-            { type: 'separator' },
+            {type: 'separator'},
             {
                 type: 'normal',
                 label: 'Exit',

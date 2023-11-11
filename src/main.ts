@@ -20,7 +20,7 @@ function createMainWindow() {
     global.__mainWindow = Window.create(false);
 
     // Load URL
-    __mainWindow.loadURL(APP.settings.deezerUrl, { userAgent: Window.userAgent() });
+    __mainWindow.loadURL(APP.settings.deezerUrl, {userAgent: Window.userAgent()});
 
     // Events
     __mainWindow.webContents.once('did-finish-load', () => {
@@ -54,7 +54,7 @@ function createMainWindow() {
 }
 
 function initializeRPC() {
-    RPC.login({ clientId: APP.settings.discordClientID }).then(() => {
+    RPC.login({clientId: APP.settings.discordClientID}).then(() => {
         setTimeout(Player.registerRPC, 3000);
     }).catch(() => {
         dialog.showErrorBox("Rich Presence Login Failed", "Please, verify if your discord app is opened/working and relaunch this application.");

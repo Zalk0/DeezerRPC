@@ -44,7 +44,7 @@ export default class Episode extends PlayerModel {
 
     getButtons(): any[] | undefined {
         if (this.id < 0) return undefined;
-        
-        return [{ label: 'Play on Deezer', url: `https://www.deezer.com/episode/${this.id}` }];
+
+        return [{label: 'Play on Deezer', url: `https://www.deezer.com/episode/${this.id}`}];
     }
 }

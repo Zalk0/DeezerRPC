@@ -10,7 +10,7 @@ export default abstract class PlayerModel {
     trayMessage: string = '';
     notification: string = '';
 
-    constructor(
+    protected constructor(
         id: number,
         title: string,
         listening: boolean,
@@ -27,9 +27,14 @@ export default abstract class PlayerModel {
     }
 
     abstract getId(): string
+
     abstract getState(): string;
+
     abstract getStartTimestamp(): number | undefined;
+
     abstract getEndTimestamp(): number | undefined;
+
     abstract getImageText(): string;
+
     abstract getButtons(): any[] | undefined;
 }
