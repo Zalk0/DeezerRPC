@@ -20,7 +20,7 @@ export const APP = {
         windowWidth: 1280,
         windowHeight: 720,
         deezerUrl: 'https://www.deezer.com/login',
-        discordClientID: '769757579177623563'
+        discordClientID: process.env.DISCORD_ID || ''
     },
     preferences: {
         closeToTray: 'closeToTray',
