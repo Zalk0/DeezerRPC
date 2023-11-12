@@ -1,3 +1,6 @@
+# To publish you need a draft release with a tag version corresponding to the version in package.json.
+# For more details : https://www.electron.build/configuration/publish.html#recommended-github-releases-workflow
+
 name: Release
 
 on:
