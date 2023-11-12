@@ -1,5 +1,12 @@
 # DeezerRPC
 
+## Notes on the project
+I have forked the project mainly to update the packages.
+I may add features when I have the time.
+Contributions are welcome.
+
+## Description
+
 Deezer integrated with the Discord Rich Presence.
 
 This project is not supported and created by Deezer.
@@ -13,15 +20,15 @@ Supports songs (including ones that user upload), radios and podcasts.
 
 I don't understand why Deezer has not implemented this until today...
 
-# Installation
+## Installation
 
 1. Download the correct release for your operating system. (**exe** = Windows, **dmg** = macOS, **AppImage** = Linux)
 2. Install the application that you have downloaded.
 
-# Usage
+## Usage
 
 When opening the app for the first time, you will have to log in with your Deezer account. **IT'S THE OFFICIAL DEEZER
-PAGE, THIS APPLICATION NOT COLLECT ANY DATA FROM THE USERS.**
+PAGE, THIS APPLICATION DOES NOT COLLECT ANY DATA FROM THE USERS.**
 
 Discord needs to be running for rich presence to work, otherwise you will have to reopen the application.
 
@@ -36,7 +43,7 @@ This application has some options in the system notification area:
 * **DeezerRPC [version]**: Open this GitHub page.
 * **Exit**: Closes the application.
 
-# Global Shortcuts
+## Global Shortcuts
 
 This application has some global shortcuts (check on your keyboard).
 
@@ -46,11 +53,10 @@ This application has some global shortcuts (check on your keyboard).
 
 * **PREVIOUS**: Go to the previous song.
 
-# Showcase
+## Showcase
 
 ![Illustration of the application](./assets/readme/discord_status.png)
 
-# Acknowledgments
+## Acknowledgments
 
-Thanks to Braasileiro for doing this app, I'm just trying to fix the last features he added and make it work with the
-new Deezer interface.
+Thanks to Braasileiro for doing this app.
