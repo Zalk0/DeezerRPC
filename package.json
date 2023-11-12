@@ -1,6 +1,6 @@
 {
   "name": "deezerrpc",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Deezer integrated with the Discord Rich Presence.",
   "main": "build/main.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "dist-linux": "npm run build && electron-builder --linux"
   },
   "build": {
-    "appId": "com.brasileiro.deezerrpc",
+    "appId": "com.zalko.deezerrpc",
     "asar": "true",
     "productName": "DeezerRPC",
     "icon": "./assets/icon.png",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Braasileiro/DeezerRPC.git"
+    "url": "git+https://github.com/Zalk0/DeezerRPC.git"
   },
   "keywords": [
     "deezer",
@@ -44,12 +44,12 @@
     "rich",
     "presence"
   ],
-  "author": "Brasileiro",
+  "author": "Zalko",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Braasileiro/DeezerRPC/issues"
+    "url": "https://github.com/Zalk0/DeezerRPC/issues"
   },
-  "homepage": "https://github.com/Braasileiro/DeezerRPC",
+  "homepage": "https://github.com/Zalk0/DeezerRPC",
   "devDependencies": {
     "@types/discord-rpc": "^4.0.8",
     "@types/set-interval-async": "^1.0.3",
