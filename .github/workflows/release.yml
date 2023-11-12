@@ -42,6 +42,5 @@ jobs:
     - name: Build and publish
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DISCORD_ID: ${{ secrets.DISCORD_ID }}
       run: |
         npm run ${{ matrix.dist }}

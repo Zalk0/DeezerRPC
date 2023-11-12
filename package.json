@@ -1,6 +1,6 @@
 {
   "name": "deezerrpc",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Deezer integrated with the Discord Rich Presence.",
   "main": "build/main.js",
   "scripts": {
