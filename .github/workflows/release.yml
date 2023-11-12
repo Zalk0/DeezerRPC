@@ -38,7 +38,7 @@ jobs:
         npm ci
     - name: npm run build
       env:
-        GH_TOKEN: ${{ secrets.SuperSecret }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         npm run dist-mac
     - name: upload macos artifact
@@ -65,7 +65,7 @@ jobs:
         npm ci
     - name: npm run build
       env:
-        GH_TOKEN: ${{ secrets.SuperSecret }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         npm run dist-win
     - name: upload windows artifact
@@ -92,7 +92,7 @@ jobs:
         npm ci
     - name: npm run build
       env:
-        GH_TOKEN: ${{ secrets.SuperSecret }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         npm run dist-linux
     - name: upload linux artifact
