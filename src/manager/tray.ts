@@ -5,7 +5,7 @@ import * as Player from '../player/player';
 import { app, Menu, shell, Tray } from 'electron';
 import * as Preferences from '../util/preferences';
 
-var tray: Tray;
+let tray: Tray;
 
 export function register() {
 

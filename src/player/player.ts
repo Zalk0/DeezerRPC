@@ -8,9 +8,9 @@ import { globalShortcut } from 'electron';
 import PlayerModel from '../model/player';
 import { setIntervalAsync } from 'set-interval-async/dynamic';
 
-var LAST = '';
-var SONG: PlayerModel;
-var RADIO_TIMESTAMP: number;
+let LAST = '';
+let SONG: PlayerModel;
+let RADIO_TIMESTAMP: number;
 
 export function togglePause() {
     __mainWindow.webContents.executeJavaScript('dzPlayer.control.togglePause();');
