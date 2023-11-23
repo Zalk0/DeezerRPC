@@ -62,7 +62,7 @@
     "discord-rpc": "^4.0.1",
     "electron-settings": "^4.0.2",
     "electron-store": "^8.1.0",
-    "got": "^11.8.6",
+    "got": "^13.0.0",
     "set-interval-async": "^3.0.3"
   }
 }
