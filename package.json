@@ -53,7 +53,7 @@
   "devDependencies": {
     "@types/discord-rpc": "^4.0.8",
     "@types/set-interval-async": "^1.0.3",
-    "electron": "^27.0.4",
+    "electron": "^27.1.2",
     "electron-builder": "^24.9.1",
     "shelljs": "^0.8.5",
     "typescript": "^5.2.2"
