@@ -1,9 +1,7 @@
 const fs = require('fs');
-const shell = require('shelljs');
 
-shell.cp('-R', './src/web', './build/');
+fs.cpSync('./src/web/', './build/web/', {recursive: true});
 
-if (!fs.existsSync('./build/assets')){
-    shell.mkdir('./build/assets');
-    shell.cp('-R', './assets/tray', './build/assets/tray');
+if (!fs.existsSync('./build/assets/')) {
+    fs.cpSync('./assets/tray/', './build/assets/tray/', {recursive: true});
 }

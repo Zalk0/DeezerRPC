@@ -6,9 +6,8 @@
   "scripts": {
     "lint": "eslint --ext .ts src/",
     "lint:fix": "eslint --fix --ext .ts src/",
-    "package-assets": "node package-assets.js",
-    "build": "tsc && npm run package-assets",
-    "start": "npm run build && electron ./build/main.js",
+    "build": "tsc && node package-assets.js",
+    "start": "npm run build && electron build/main.js",
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",
@@ -60,7 +59,6 @@
     "electron": "^27.1.2",
     "electron-builder": "^24.9.1",
     "eslint": "^8.54.0",
-    "shelljs": "^0.8.5",
     "typescript": "^5.3.2"
   },
   "dependencies": {
