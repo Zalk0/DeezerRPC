@@ -7,8 +7,8 @@ export default abstract class PlayerModel {
     statusKey: string | undefined;
     statusText: string | undefined;
 
-    trayMessage: string = '';
-    notification: string = '';
+    trayMessage = '';
+    notification = '';
 
     protected constructor(
         id: number,

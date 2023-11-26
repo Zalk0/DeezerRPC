@@ -33,7 +33,7 @@ export function registerShortcuts() {
 export function registerRPC() {
     setIntervalAsync(async () => {
         try {
-            let [current, listening, remaining] = await __mainWindow.webContents.executeJavaScript(
+            const [current, listening, remaining] = await __mainWindow.webContents.executeJavaScript(
                 `[
                     dzPlayer.getCurrentSong(),
                     dzPlayer.isPlaying(),
@@ -121,7 +121,7 @@ function timestamp(listening: boolean, remaining: number): number | undefined {
 }
 
 function artists(artist: string, list: any[]): string {
-    let names = list?.map(o => o.ART_NAME).join(", ") || artist;
+    const names = list?.map(o => o.ART_NAME).join(", ") || artist;
 
     return names.length <= 128 ? names : artist;
 }

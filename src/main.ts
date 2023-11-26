@@ -13,8 +13,12 @@ function main() {
 }
 
 function createMainWindow() {
-    // SplashWindow
-    let splashWindow: BrowserWindow;
+    // Create SplashWindow
+    const splashWindow: BrowserWindow = Window.create(true);
+    splashWindow.setMenu(null);
+    splashWindow.setResizable(false);
+    splashWindow.setMaximizable(false);
+    splashWindow.loadURL(`file://${__dirname}/web/splash.html`)
 
     // Create MainWindow
     global.__mainWindow = Window.create(false);
@@ -44,13 +48,6 @@ function createMainWindow() {
 
         if (Preferences.getPreference<boolean>(APP.preferences.closeToTray)) __mainWindow.hide(); else app.exit();
     });
-
-    // Create SplashWindow
-    splashWindow = Window.create(true);
-    splashWindow.setMenu(null);
-    splashWindow.setResizable(false);
-    splashWindow.setMaximizable(false);
-    splashWindow.loadURL(`file://${__dirname}/web/splash.html`)
 }
 
 function initializeRPC() {
