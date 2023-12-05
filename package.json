@@ -1,13 +1,13 @@
 {
   "name": "deezerrpc",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Deezer integrated with the Discord Rich Presence.",
   "main": "build/main.js",
   "scripts": {
     "lint": "eslint --ext .ts src/",
     "lint:fix": "eslint --fix --ext .ts src/",
     "build": "tsc && node package-assets.js",
-    "start": "npm run build && electron build/main.js",
+    "start": "npm run build && electron .",
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",
