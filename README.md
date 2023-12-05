@@ -59,4 +59,4 @@ This application has some global shortcuts (check on your keyboard).
 
 ## Acknowledgments
 
-Thanks to Braasileiro for doing this app.
+Thanks to Brasileiro for doing this app.
