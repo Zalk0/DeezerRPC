@@ -52,7 +52,7 @@
   "homepage": "https://github.com/Zalk0/DeezerRPC",
   "devDependencies": {
     "@types/discord-rpc": "^4.0.8",
-    "@types/node": "^20.10.3",
+    "@types/node": "^20.10.6",
     "@types/set-interval-async": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
