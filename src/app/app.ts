@@ -1,8 +1,7 @@
 import { Client } from 'discord-rpc';
 import { BrowserWindow } from 'electron';
 import ElectronStore from 'electron-store';
-
-const PACKAGE = require('../../package.json');
+import Package from '../../package.json';
 
 // Global
 declare global {
@@ -12,10 +11,10 @@ declare global {
 // App
 export const APP = {
     name: 'DeezerRPC',
-    version: PACKAGE.version,
-    homepage: PACKAGE.homepage,
+    version: Package.version,
+    homepage: Package.homepage,
     packageUrl: 'https://raw.githubusercontent.com/Zalk0/DeezerRPC/main/package.json',
-    appId: 'com.zalko.deezerrpc',
+    appId: Package.build.appId,
     settings: {
         windowWidth: 1280,
         windowHeight: 720,
