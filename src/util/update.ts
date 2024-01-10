@@ -32,7 +32,7 @@ export async function checkVersion(fromUser: boolean) {
             });
         } else {
             if (fromUser) {
-                dialog.showMessageBox({
+                await dialog.showMessageBox({
                     type: 'info',
                     title: `${APP.name} Updater`,
                     message: 'You already have the latest version.'
