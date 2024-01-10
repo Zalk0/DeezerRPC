@@ -1,7 +1,8 @@
 import { Client } from 'discord-rpc';
 import { BrowserWindow } from 'electron';
 import ElectronStore from 'electron-store';
-import Package from '../../package.json';
+
+const Package = require('../../package.json');
 
 // Global
 declare global {
