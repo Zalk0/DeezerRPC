@@ -15,7 +15,7 @@ export const APP = {
     version: Package.version,
     homepage: Package.homepage,
     packageUrl: 'https://raw.githubusercontent.com/Zalk0/DeezerRPC/main/package.json',
-    appId: Package.build.appId,
+    appId: 'com.zalko.deezerrpc',
     settings: {
         windowWidth: 1280,
         windowHeight: 720,
