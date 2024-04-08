@@ -55,14 +55,14 @@
   "homepage": "https://github.com/Zalk0/DeezerRPC",
   "devDependencies": {
     "@types/discord-rpc": "^4.0.8",
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.12.5",
     "@types/set-interval-async": "^1.0.3",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
-    "electron": "^29.1.6",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "electron": "^29.2.0",
     "electron-builder": "^24.13.3",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.3"
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.4"
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
