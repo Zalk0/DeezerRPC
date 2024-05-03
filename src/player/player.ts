@@ -1,45 +1,48 @@
-import { RPC } from '../app/app';
-import Song from '../model/song';
-import Radio from '../model/radio';
-import Unknown from '../model/unknown';
-import Episode from '../model/episode';
-import * as Tray from '../manager/tray';
-import { globalShortcut } from 'electron';
-import PlayerModel from '../model/player';
-import { setIntervalAsync } from 'set-interval-async/dynamic';
+import { RPC } from "../app/app";
+import Song from "../model/song";
+import Radio from "../model/radio";
+import Unknown from "../model/unknown";
+import Episode from "../model/episode";
+import * as Tray from "../manager/tray";
+import { globalShortcut } from "electron";
+import PlayerModel from "../model/player";
+import { setIntervalAsync } from "set-interval-async/dynamic";
 
-let LAST = '';
+let LAST = "";
 let SONG: PlayerModel;
 let RADIO_TIMESTAMP: number;
 
 export function togglePause() {
-    __mainWindow.webContents.executeJavaScript('dzPlayer.control.togglePause();');
+    __mainWindow.webContents.executeJavaScript(
+        "dzPlayer.control.togglePause();",
+    );
 }
 
 export function nextSong() {
-    __mainWindow.webContents.executeJavaScript('dzPlayer.control.nextSong();');
+    __mainWindow.webContents.executeJavaScript("dzPlayer.control.nextSong();");
 }
 
 export function prevSong() {
-    __mainWindow.webContents.executeJavaScript('dzPlayer.control.prevSong();');
+    __mainWindow.webContents.executeJavaScript("dzPlayer.control.prevSong();");
 }
 
 export function registerShortcuts() {
-    globalShortcut.register('MediaPlayPause', () => togglePause());
-    globalShortcut.register('MediaNextTrack', () => nextSong());
-    globalShortcut.register('MediaPreviousTrack', () => prevSong());
+    globalShortcut.register("MediaPlayPause", () => togglePause());
+    globalShortcut.register("MediaNextTrack", () => nextSong());
+    globalShortcut.register("MediaPreviousTrack", () => prevSong());
 }
 
 export function registerRPC() {
     setIntervalAsync(async () => {
         try {
-            const [current, listening, remaining] = await __mainWindow.webContents.executeJavaScript(
-                `[
+            const [current, listening, remaining] =
+                await __mainWindow.webContents.executeJavaScript(
+                    `[
                     dzPlayer.getCurrentSong(),
                     dzPlayer.isPlaying(),
                     dzPlayer.getRemainingTime()
-                ]`
-            );
+                ]`,
+                );
 
             SONG = getSong(current, listening, remaining);
 
@@ -48,12 +51,12 @@ export function registerRPC() {
                 state: SONG.getState(),
                 startTimestamp: SONG.getStartTimestamp(),
                 endTimestamp: SONG.getEndTimestamp(),
-                largeImageKey: 'default',
+                largeImageKey: "default",
                 largeImageText: SONG.getImageText(),
                 smallImageKey: SONG.statusKey,
                 smallImageText: SONG.statusText,
                 buttons: SONG.getButtons(),
-                instance: false
+                instance: false,
             });
 
             if (LAST !== SONG.getId()) {
@@ -66,16 +69,21 @@ export function registerRPC() {
     }, 5000);
 }
 
-function getSong(current: any, listening: boolean, remaining: number): PlayerModel {
+function getSong(
+    current: any,
+    listening: boolean,
+    remaining: number,
+): PlayerModel {
     if (current?.LIVE_ID) {
-        if (`RADIO_${current.LIVE_ID}` != LAST) RADIO_TIMESTAMP = Math.floor(Date.now() / 1000);
+        if (`RADIO_${current.LIVE_ID}` != LAST)
+            RADIO_TIMESTAMP = Math.floor(Date.now() / 1000);
 
         return new Radio(
             current.LIVE_ID,
             current.LIVESTREAM_TITLE,
             listening,
             current.LIVESTREAM_IMAGE_MD5,
-            RADIO_TIMESTAMP
+            RADIO_TIMESTAMP,
         );
     }
 
@@ -87,7 +95,7 @@ function getSong(current: any, listening: boolean, remaining: number): PlayerMod
             current.SHOW_ART_MD5,
             timestamp(listening, remaining),
             current.SHOW_NAME,
-            current.EPISODE_DESCRIPTION
+            current.EPISODE_DESCRIPTION,
         );
     }
 
@@ -99,29 +107,23 @@ function getSong(current: any, listening: boolean, remaining: number): PlayerMod
             current.ALB_PICTURE,
             timestamp(listening, remaining),
             current.ALB_TITLE,
-            artists(current.ART_NAME, current.ARTISTS)
+            artists(current.ART_NAME, current.ARTISTS),
         );
     }
 
-    return new Unknown(
-        0,
-        'Unknown Title',
-        false,
-        undefined,
-        undefined
-    );
+    return new Unknown(0, "Unknown Title", false, undefined, undefined);
 }
 
 function timestamp(listening: boolean, remaining: number): number | undefined {
     if (listening) {
-        return Date.now() + (remaining * 1000);
+        return Date.now() + remaining * 1000;
     }
 
     return undefined;
 }
 
 function artists(artist: string, list: any[]): string {
-    const names = list?.map(o => o.ART_NAME).join(", ") || artist;
+    const names = list?.map((o) => o.ART_NAME).join(", ") || artist;
 
     return names.length <= 128 ? names : artist;
 }

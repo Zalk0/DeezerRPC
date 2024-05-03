@@ -1,5 +1,5 @@
-import { APP } from '../app/app';
-import PlayerModel from './player';
+import { APP } from "../app/app";
+import PlayerModel from "./player";
 
 export default class Episode extends PlayerModel {
     name: string;
@@ -12,12 +12,12 @@ export default class Episode extends PlayerModel {
         image: string | undefined,
         time: number | undefined,
         name: string,
-        description: string
+        description: string,
     ) {
         super(id, title, listening, image, time);
 
         this.name = name;
-        this.description = description
+        this.description = description;
         this.trayMessage = `${this.name} • ${this.title}`;
         this.notification = `${this.title}\n${this.name}`;
     }
@@ -45,6 +45,11 @@ export default class Episode extends PlayerModel {
     getButtons(): any[] | undefined {
         if (this.id < 0) return undefined;
 
-        return [{label: 'Play on Deezer', url: `https://www.deezer.com/episode/${this.id}`}];
+        return [
+            {
+                label: "Play on Deezer",
+                url: `https://www.deezer.com/episode/${this.id}`,
+            },
+        ];
     }
 }

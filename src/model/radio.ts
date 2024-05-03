@@ -1,5 +1,5 @@
-import { APP } from '../app/app';
-import PlayerModel from './player';
+import { APP } from "../app/app";
+import PlayerModel from "./player";
 
 export default class Radio extends PlayerModel {
     constructor(
@@ -7,12 +7,12 @@ export default class Radio extends PlayerModel {
         title: string,
         listening: boolean,
         image: string | undefined,
-        time: number | undefined
+        time: number | undefined,
     ) {
         super(id, title, listening, image, time);
 
-        this.statusKey = 'streaming';
-        this.statusText = 'Streaming';
+        this.statusKey = "streaming";
+        this.statusText = "Streaming";
         this.trayMessage = `Radio • ${this.title}`;
         this.notification = `${this.title}\nRadio`;
     }
@@ -22,7 +22,7 @@ export default class Radio extends PlayerModel {
     }
 
     getState(): string {
-        return 'Radio';
+        return "Radio";
     }
 
     getStartTimestamp(): number | undefined {

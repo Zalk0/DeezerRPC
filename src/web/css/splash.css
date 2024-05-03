@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'MabryDeezer-Bold';
-    src: url('./fonts/MabryDeezer/MabryDeezer-Bold.eot');
-    src: url('./fonts/MabryDeezer/MabryDeezer-Bold.eot?#iefix') format('embedded-opentype'),
-    url('./fonts/MabryDeezer/MabryDeezer-Bold.woff2') format('woff2'),
-    url('./fonts/MabryDeezer/MabryDeezer-Bold.woff') format('woff'),
-    url('./fonts/MabryDeezer/MabryDeezer-Bold.ttf') format('truetype')
+    font-family: "MabryDeezer-Bold";
+    src: url("./fonts/MabryDeezer/MabryDeezer-Bold.eot");
+    src: url("./fonts/MabryDeezer/MabryDeezer-Bold.eot?#iefix") format("embedded-opentype"),
+         url("./fonts/MabryDeezer/MabryDeezer-Bold.woff2") format("woff2"),
+         url("./fonts/MabryDeezer/MabryDeezer-Bold.woff") format("woff"),
+         url("./fonts/MabryDeezer/MabryDeezer-Bold.ttf") format("truetype");
 }
 
 * {

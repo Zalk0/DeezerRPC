@@ -1,5 +1,5 @@
-import { APP } from '../app/app';
-import PlayerModel from './player';
+import { APP } from "../app/app";
+import PlayerModel from "./player";
 
 export default class Unknown extends PlayerModel {
     constructor(
@@ -14,15 +14,15 @@ export default class Unknown extends PlayerModel {
         this.statusKey = undefined;
         this.statusText = undefined;
         this.trayMessage = APP.name;
-        this.notification = 'Unknown';
+        this.notification = "Unknown";
     }
 
     getId(): string {
-        return 'UNKNOWN';
+        return "UNKNOWN";
     }
 
     getState(): string {
-        return 'Unknown State';
+        return "Unknown State";
     }
 
     getStartTimestamp(): number | undefined {

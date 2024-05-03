@@ -1,11 +1,12 @@
 {
   "name": "deezerrpc",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Deezer integrated with the Discord Rich Presence.",
   "main": "build/main.js",
   "scripts": {
     "lint": "eslint src/",
-    "lint:fix": "eslint --fix src/",
+    "lint:fix": "eslint src/ --fix",
+    "prettier": "prettier **/*.{js,ts} --write",
     "build": "tsc && node package-assets.js",
     "start": "npm run build && electron .",
     "pack": "npm run build && electron-builder --dir",
@@ -56,11 +57,13 @@
   "devDependencies": {
     "@eslint/js": "^9.1.1",
     "@types/discord-rpc": "^4.0.8",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.8",
     "@types/set-interval-async": "^1.0.3",
-    "electron": "^30.0.1",
+    "electron": "^30.0.2",
     "electron-builder": "^24.13.3",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0"
   },

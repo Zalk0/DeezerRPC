@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "lib": [
-      "es2022",
-      "dom"
-    ],
-    "module": "commonjs",
-    "target": "es2022",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "outDir": "build",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    }
-  },
-  "include": [
-    "src/**/*"
-  ]
+    "compilerOptions": {
+        "lib": [
+            "es2022",
+            "dom"
+        ],
+        "module": "commonjs",
+        "target": "es2022",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "outDir": "build",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
 }

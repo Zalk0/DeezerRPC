@@ -1,5 +1,5 @@
-import { APP_CONFIG } from '../app/app';
-import settings from 'electron-settings';
+import { APP_CONFIG } from "../app/app";
+import settings from "electron-settings";
 
 export function getPreference<T>(key: string): T | any {
     return APP_CONFIG.get(key);
