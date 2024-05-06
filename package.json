@@ -55,9 +55,9 @@
   },
   "homepage": "https://github.com/Zalk0/DeezerRPC",
   "devDependencies": {
-    "@eslint/js": "^9.1.1",
+    "@eslint/js": "^9.2.0",
     "@types/discord-rpc": "^4.0.8",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.9",
     "@types/set-interval-async": "^1.0.3",
     "electron": "^30.0.2",
     "electron-builder": "^24.13.3",
