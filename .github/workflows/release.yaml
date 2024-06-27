@@ -24,6 +24,8 @@ jobs:
           - node: 20
           - os: macos-latest
             dist: dist:mac
+          - os: macos-13
+            dist: dist:mac
           - os: ubuntu-latest
             dist: dist:linux
           - os: windows-latest
