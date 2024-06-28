@@ -6,6 +6,9 @@ updates:
       interval: "weekly"
     ignore:
       - dependency-name: "got"
+        versions: [ ">=12" ]
+      - dependency-name: "electron-store"
+        versions: [ ">=9" ]
     groups:
       dependencies:
         dependency-type: production
