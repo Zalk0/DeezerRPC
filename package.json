@@ -57,15 +57,15 @@
   "devDependencies": {
     "@eslint/js": "^9.7.0",
     "@types/discord-rpc": "^4.0.8",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@types/set-interval-async": "^1.0.3",
-    "electron": "^31.2.0",
+    "electron": "^31.2.1",
     "electron-builder": "^24.13.3",
     "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.0.0-alpha.44"
+    "typescript-eslint": "^8.0.0-alpha.51"
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
