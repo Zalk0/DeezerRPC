@@ -1,6 +1,6 @@
 {
   "name": "deezerrpc",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Deezer integrated with the Discord Rich Presence.",
   "main": "build/main.js",
   "scripts": {
@@ -13,26 +13,31 @@
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",
     "dist:mac": "npm run build && electron-builder --mac",
-    "dist:linux": "npm run build && electron-builder --linux"
+    "dist:linux": "npm run build && electron-builder --linux",
+    "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "appId": "com.zalko.deezerrpc",
-    "asar": "true",
     "productName": "DeezerRPC",
-    "icon": "./assets/icon.png",
     "files": [
       "build/**/*"
     ],
     "win": {
+      "icon": "../assets/icon.png",
       "target": "nsis"
     },
     "mac": {
+      "icon": "../assets/icon.icns",
       "target": "dmg",
       "category": "public.app-category.music"
     },
     "linux": {
-      "target": "AppImage",
-      "category": "Audio"
+      "icon": "../assets/icon.icns",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Audio;AudioVideo"
     }
   },
   "repository": {
