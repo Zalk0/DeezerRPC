@@ -63,7 +63,7 @@
     "@eslint/js": "^9.9.1",
     "@types/discord-rpc": "^4.0.8",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.16.2",
+    "@types/node": "^22.5.2",
     "@types/set-interval-async": "^1.0.3",
     "electron": "^32.0.1",
     "electron-builder": "^24.13.3",
