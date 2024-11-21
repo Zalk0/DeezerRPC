@@ -1,13 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
     ignore:
-      - dependency-name: "got"
+      - dependency-name: got
         versions: [ ">=12" ]
-      - dependency-name: "electron-store"
+      - dependency-name: electron-store
         versions: [ ">=9" ]
     groups:
       dependencies:
@@ -17,3 +17,8 @@ updates:
           - patch
       dev-dependencies:
         dependency-type: development
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
