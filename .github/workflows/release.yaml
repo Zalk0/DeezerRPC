@@ -21,7 +21,7 @@ jobs:
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
         include:
-          - node: 20
+          - node: 22
           - os: macos-latest
             dist: dist:mac
           - os: macos-13
