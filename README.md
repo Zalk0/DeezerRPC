@@ -5,6 +5,11 @@ I have forked the project mainly to update the packages.
 I may add features when I have the time.
 Contributions are welcome.
 
+> [!WARNING]
+> I am stopping maintenance of this project as I have found a better alternative:
+> [deezer-discord-rpc](https://github.com/CuteTenshii/deezer-discord-rpc)  
+> I encourage you to switch to it.
+
 ## Description
 
 Deezer integrated with the Discord Rich Presence.
